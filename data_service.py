@@ -72,9 +72,3 @@ def show_help_types_fixed_assets(help_types_fixed_assets):
     for help_types_fixed_asset in help_types_fixed_assets:
         if help_types_fixed_assets_code_from < help_types_fixed_asset[1] < help_types_fixed_assets_code_to:
             print("Код виду основних засобів: {:6}| Вид основних засобів: {:2}".format( help_types_fixed_asset[0], help_types_fixed_asset[1]))
-
-# fixed_assets = get_movement_fixed_assets()
-# show_movement_fixed_assets(fixed_assets)
-#
-# help_types_fixed_assets = get_help_types_fixed_assets()
-# show_help_types_fixed_assets(fixed_assets)

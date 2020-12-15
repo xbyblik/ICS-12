@@ -6,7 +6,7 @@ from data_service import get_movement_fixed_assets, get_help_types_fixed_assets
 # Шаблон для заполнения таблицы "Анализа движения основных средств"
 temp_analysis_move_fixed_assets = {
     'enterprise'            : '',   # Підприємтсво
-    'type_fixed_assets'     : '',    # Вид основних засобів
+    'type_fixed_assets'     : '',   # Вид основних засобів
     'Remainder_01/01/18'    : 0,    # Залишок на 1.01.18
     'Received_2018'         : 0,    # Надійшло у 2018
     'Released_2018'         : 0,    # Вибуло у 2018
@@ -22,7 +22,7 @@ def get_analytics():
     """
 
     def get_type_funds(code):
-        """ Делаем и возвращаем пользователю аналитику движения  средств
+        """ Возвращаем пользователю название вида средств по коду
 
         Args:
             type_fixed_assets([code]): Код вида основных средств
@@ -41,8 +41,8 @@ def get_analytics():
     analytics_list = []
 
     # Получаем информацию с двух таблиц
-    types_assets    = get_help_types_fixed_assets()
     movement_assets = get_movement_fixed_assets()
+    types_assets    = get_help_types_fixed_assets()
 
     for movement_asset in movement_assets:
 
@@ -63,5 +63,5 @@ def get_analytics():
     return analytics_list
 
 ggwp = get_analytics()
-for ggw in ggwp:
-    print(ggw)
+for gg in ggwp:
+    print(gg)
